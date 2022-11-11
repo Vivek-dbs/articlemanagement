@@ -1,0 +1,60 @@
+<div class="w-100 py-3">
+    <div class="row px-3 mb-2">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <div class="w-100 d-flex flex-lg-row flex-sm-row flex-md-row flex-column justify-content-center align-items-center">
+                 <input type="text" class="form-control px-3 py-2" [(ngModel)]="articleSearch" placeholder="Search for better result"> 
+                 &nbsp;&nbsp;&nbsp; <button class="btn-search px-3 py-2" (click)="getArticleData(articleSearch)"><i class="material-icons">search</i>&nbsp;Search</button>
+             </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        </div>
+    </div>
+    <div class="w-100 hp-70"></div>
+    <div class="row px-3 mb-2">
+            <div class="col-12">
+               <h1 class="mb-3 f-22 fw-600" style="color: var(--clr-6f6f6f);">Popular Article</h1>
+            </div>
+            <div class="col-12 w-100 slider">
+               <div class="w-100  slides">
+                  <div class="article-card p-3 mr-2 pointer" *ngFor="let article of popularArticleData; let i=index" (click)="gotoArticleDetails(article)">
+                     <div class="w-100 text-center d-flex justify-content-center align-items-center mx-auto">
+                        <img src="{{article.image}}" class="article-image">
+                     </div>
+                     <div class="w-100 mt-2 text-left">
+                          <h2 class="f-20 fw-500 mb-2">{{article.name}}</h2>
+                     </div>
+                     <div class="w-100 mt-2 text-left mb-3">
+                          <p class="f-16 description-tag">{{article.description}}</p>
+                     </div>
+               </div>
+               </div>
+            </div>
+    </div>
+    <div class="w-100 hp-50"></div>
+    <div class="row px-3 mb-2">
+        <div class="col-12">
+           <h1 class="mb-3 f-22 fw-600" style="color: var(--clr-6f6f6f);">Resulted Article</h1>
+        </div>
+        <div class="col-12 w-100 slider">
+           <div class="row w-100 vertical-slider">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-3" *ngFor="let article of resultedArticleData; let i=index" (click)="gotoArticleDetails(article)">
+               <div class="article-card p-3 mr-2 pointer" >
+                  <div class="w-100 text-center d-flex justify-content-center align-items-center mx-auto">
+                     <img src="{{article.image}}" class="article-image">
+                  </div>
+                  <div class="w-100 mt-2 text-left">
+                       <h2 class="f-20 fw-500 mb-2">{{article.name}}</h2>
+                  </div>
+                  <div class="w-100 mt-2 text-left mb-3">
+                       <p class="f-16 description-tag">{{article.description}}</p>
+                  </div>
+            </div>
+            </div>
+           </div>
+        </div>
+</div>
+
+ 
+</div>

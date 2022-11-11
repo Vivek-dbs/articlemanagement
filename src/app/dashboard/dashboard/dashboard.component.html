@@ -1,0 +1,124 @@
+<div class="w-100 py-3">
+    <div class="w-100 px-4">
+        <div class="row bg-white py-3 px-2"  style="border-radius: 10px;">
+            <div class="col-12 d-flex justify-content-between align-items-center">
+                <div class="p-2 mr-auto">
+                    <span class="f-20 fw-600">Article List</span>
+                </div>
+                <div class="p-2 ml-auto">
+                   <button class="px-3 py-2 text-white" style="border: none; background-color: #337ab7;" (click)="addArticleModalpopup(content)">Add Article +</button>
+                </div>
+            </div>
+
+            <div class="col-12 table-scroll">
+                    <div style="min-width: 1200px; margin: auto;">
+                         <table class="table table-striped table-responsive">
+                            <thead >
+                                <tr style="border-bottom: 2px solid #e2e7f1 !important; min-height: 200px;">
+                                    <th class="t-head" style="min-width: 200px;">Article Name</th>
+                                    <th class="t-head" style="min-width: 200px;">Author Name</th>
+                                    <th class="t-head" >Description</th>
+                                    <th class="t-head" >Image</th>
+                                    <th class="t-head" style="min-width: 200px;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr  *ngFor="let article of allArticleData; let i=index">
+                                    <td>
+                                        {{article.name}}
+                                    </td>
+                                    <td>
+                                        {{article.author}}
+                                    </td>
+                                    <td>
+                                        {{article.description}}
+                                    </td>
+                                    <td>
+                                        <img src="{{article.image}}" alt="article-image" class="table-image">
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <div class="p-2">
+                                                <button class="px-2 py-2 edit-btn" (click)="editArticle(article,articelEdit)"><i class="material-icons">edit</i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row w-100">
+        <ng-template #content let-modal>
+            <div class="modal-header p-2">
+                <h3 class="modal-title">Add Article Information</h3>
+                <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+            </div>
+            <div class="modal-body py-3">
+              <div class="w-100">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="w-100 mt-3">
+                            <label for="ArticleName" class="mb-2 f-18">Article Name</label>
+                            <input type="text" class="form-control py-2 px-3" name="ArticleName" [(ngModel)]="article_name">
+                         </div>
+                        <div class="w-100 mt-3">
+                            <label for="authorName" class="mb-2 f-18">Author Name</label>
+                            <input type="text" class="form-control py-2 px-3" name="authorName" [(ngModel)]="author_name">
+                         </div>
+                        <div class="w-100 mt-3">
+                            <label for="description" class="mb-2 f-18">Description</label>
+                            <textarea class="form-control py-2 px-3" name="description" id="" cols="30" rows="5" [(ngModel)]="description"></textarea>
+                         </div>
+                        <div class="w-100 mt-3">
+                            <label for="description" class="mb-2 f-18">Upload Image</label>
+                            <input type="file" #myInput accept="image/jpeg,image/jpg" class="form-control px-3 py-2" (change)="selectFile($event)" />
+                         </div>
+                        <div class="w-100 mt-3 text-center">
+                            <button class="px-3 py-2 sbmit-btn" (click)="submitArticle()">Submit</button>
+                         </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="modal-footer p-3">
+                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+            </div> -->
+        </ng-template>
+        <ng-template #articelEdit let-modal>
+            <div class="modal-header p-2">
+                <h3 class="modal-title">Edit Article Information</h3>
+                <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+            </div>
+            <div class="modal-body py-3">
+              <div class="w-100">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="w-100 mt-3">
+                            <label for="articleName" class="mb-2 f-18">Article Name</label>
+                            <input type="text" class="form-control py-2 px-3" name="articleName" [(ngModel)]="article_name_edit">
+                         </div>
+                        <div class="w-100 mt-3">
+                            <label for="authorName" class="mb-2 f-18">Author Name</label>
+                            <input type="text" class="form-control py-2 px-3" name="authorName" [(ngModel)]="author_name_edit">
+                         </div>
+                        <div class="w-100 mt-3">
+                            <label for="description" class="mb-2 f-18">Description</label>
+                            <textarea class="form-control py-2 px-3" name="description" id="" cols="30" rows="5" [(ngModel)]="description_edit"></textarea>
+                         </div>
+                        <div class="w-100 mt-3 text-center">
+                            <button class="px-3 py-2 sbmit-btn" (click)="updateArticle()">Update</button>
+                         </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="modal-footer p-3">
+                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+            </div> -->
+        </ng-template>
+    </div>
+</div>

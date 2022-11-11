@@ -1,0 +1,339 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+/*  */
+
+*{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.body-div{
+    width: 100% !important;
+    background-color: #f5f5f5;
+}
+
+.main-content{
+    margin-top: 65px !important;
+    position: relative !important;
+    min-height: 90vh;
+}
+
+.header{
+    position: fixed;
+    height: 65px !important;
+    z-index: 9;
+}
+
+.footer{
+    background-color: lightgray;
+    padding: 5px 10px;
+}
+
+.bottom-box-shadow{
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(217,217,217,1);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(217,217,217,1);
+    box-shadow: 0px 5px 10px 0px rgba(217,217,217,1);
+}
+
+/* ------------------Font-size & Font-Weight classes----------------------- */
+
+.f-9 {
+    font-size: 9px !important;
+}
+
+.f-10 {
+    font-size: 10px !important;
+}
+
+.f-11 {
+    font-size: 11px !important;
+}
+
+.f-12 {
+    font-size: 12px !important;
+}
+
+.f-13 {
+    font-size: 13px !important;
+}
+
+.f-14 {
+    font-size: 14px !important;
+}
+
+.f-15 {
+    font-size: 15px !important;
+}
+
+.f-16 {
+    font-size: 16px !important;
+}
+
+.f-17 {
+    font-size: 17px !important;
+}
+
+.f-18 {
+    font-size: 18px !important;
+}
+
+.f-19 {
+    font-size: 19px !important;
+}
+
+.f-20 {
+    font-size: 20px !important;
+}
+
+.f-21 {
+    font-size: 21px !important;
+}
+
+.f-22 {
+    font-size: 22px !important;
+}
+
+.f-23 {
+    font-size: 23px !important;
+}
+
+.f-24 {
+    font-size: 24px !important;
+}
+
+.f-25 {
+    font-size: 25px !important;
+}
+.f-26 {
+    font-size: 26px !important;
+}
+.f-27 {
+    font-size: 27px !important;
+}
+.f-28 {
+    font-size: 28px !important;
+}
+.f-29 {
+    font-size: 29px !important;
+}
+.f-30 {
+    font-size: 30px !important;
+}
+.f-31 {
+    font-size: 31px !important;
+}
+.f-32 {
+    font-size: 32px !important;
+}
+.f33 {
+    font-size:33px !important;
+}
+.f-34 {
+    font-size: 34px !important;
+}
+.f-35 {
+    font-size: 35px !important;
+}
+
+.fw-none {
+    font-weight: none !important;
+}
+.fw-100 {
+    font-weight: 100 !important;
+}
+
+.fw-200 {
+    font-weight: 200 !important;
+}
+
+.fw-300 {
+    font-weight: 300 !important;
+}
+
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.fw-800 {
+    font-weight: 800 !important;
+}
+
+.fw-900 {
+    font-weight: 900 !important;
+}
+
+.fw-b {
+    font-weight: bold !important;
+}
+
+
+/* ----------------------------------------Width in Percentage CSS------------------------- */
+
+.w-100 {
+    width: 100% !important;
+}
+.w-95 {
+    width: 95% !important;
+}
+.w-90 {
+    width: 90% !important;
+}
+
+.w-80 {
+    width: 80% !important;
+}
+
+.w-70 {
+    width: 70% !important;
+}
+
+.w-60 {
+    width: 60% !important;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+
+.w-40 {
+    width: 40% !important;
+}
+
+.w-30 {
+    width: 30% !important;
+}
+
+.w-20 {
+    width: 20% !important;
+}
+
+.w-10 {
+    width: 10% !important;
+}
+
+.w-39{
+    width: 39vw !important;
+}
+/* --------------------Hight in percentage-------------- */
+.h-100 {
+    height: 100% !important;
+}
+.h-90 {
+    height: 90% !important;
+}
+
+.h-80 {
+    height: 80% !important;
+}
+
+.h-70 {
+    height: 70% !important;
+}
+
+.h-60 {
+    height: 60% !important;
+}
+
+.h-50 {
+    height: 50% !important;
+}
+
+.h-40 {
+    height: 40% !important;
+}
+
+.h-30 {
+    height: 30% !important;
+}
+
+.h-20 {
+    height: 20% !important;
+}
+
+.h-10 {
+    height: 10% !important;
+}
+
+
+/* Hieght in pixcel */
+
+.hp-100 {
+    height: 100px !important;
+}
+.hp-90 {
+    height: 90px !important;
+}
+
+.hp-80 {
+    height: 80px !important;
+}
+
+.hp-70 {
+    height: 70px !important;
+}
+
+.hp-60 {
+    height: 60px !important;
+}
+
+.hp-50 {
+    height: 50px !important;
+}
+
+.hp-40 {
+    height: 40px !important;
+}
+
+.hp-30 {
+    height: 30px !important;
+}
+
+.hp-20 {
+    height: 20px !important;
+}
+
+.hp-10 {
+    height: 10px !important;
+}
+
+:root{
+    --clr-6f6f6f : #6f6f6f;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.text-right{
+    text-align: right !important;
+}
+.modal-md{
+    margin: auto !important;
+}
+
+.modal-content{
+    margin-top: 10vh !important;
+    padding: 20px !important;
+}
+
+.text-left{
+    text-align: left !important;
+}

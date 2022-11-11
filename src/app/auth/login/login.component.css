@@ -1,0 +1,31 @@
+.login-div{
+    padding: 5px 10px;
+    background-color: #fff !important;
+    border-radius: 10px !important;
+    /* border: 1px solid #a5a5a5; */
+}
+
+.login-btn{
+    width: 100%;
+    background-color: var(--clr-6f6f6f);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    height: 50px;
+    font-weight: 500;
+}
+.show-hide{
+    position: relative;
+    top: -1.9rem;
+    right: 10px;
+    font-size: 16px;
+    color: darkgray;
+}
+
+.login-btn:hover{
+    border: 1px solid var(--clr-6f6f6f);
+    color: var(--clr-6f6f6f);
+    background-color: #fff;
+    transition: 0.3s;
+}

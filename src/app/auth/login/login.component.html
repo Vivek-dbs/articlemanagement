@@ -1,0 +1,66 @@
+<div class="w-100 py-3">
+    <div class="row px-3 d-flex justify-content-center align-items-center mb-5">
+         <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12">
+         </div>
+
+<!-- admin login -->
+
+         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" *ngIf="currentDiv == 'adminLogin'">
+            <div class="w-100 login-div px-3 py-5 mt-5">
+                 <div class="w-100 text-center mt-lg-4 mt-md-4 mt-sm-3 mt-2">
+                    <h1 class="mb-2 f-28 fw-700" style="color: var(--clr-6f6f6f);">Welcome</h1>
+                 </div>
+                 <div class="w-100 mt-5">
+                    <label for="email" class="mb-2 f-18">Email</label>
+                    <input type="text" [(ngModel)]="adminData.email" class="form-control py-2 px-3" name="email">
+                 </div>
+                 <div class="w-100 mt-lg-4 mt-md-4 mt-sm-3 mt-2">
+                    <label for="password" class="mb-2 f-18">Password</label>
+                    <input [type]="passwordSH?'text':'password'" [(ngModel)]="adminData.password" class="form-control py-2 px-3" name="password">
+                    <div class="w-100 text-right">
+                     <span *ngIf="!passwordSH" class="show-hide pointer" (click)="passwordSH = !passwordSH">Show</span>
+                     <span *ngIf="passwordSH" class="show-hide pointer" (click)="passwordSH = !passwordSH">Hide</span>
+                   </div>
+                  </div>
+                 <div class="w-100 mt-lg-5 mt-md-5  mt-4">
+                    <button class="py-2 px-3 login-btn" (click)="login()">LOGIN</button>
+                 </div>
+                 <div class="w-100 mt-lg-5 mt-md-5  mt-4 text-center">
+                    <span class="f-15 text-primary fw-400 pointer" (click)="changeDiv('userSignUp')">New User SignUp?</span>
+                 </div>
+            </div>
+         </div>
+
+
+<!-- user sign up -->
+         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" *ngIf="currentDiv == 'userSignUp'">
+            <div class="w-100 login-div px-3 py-5 mt-5">
+                 <div class="w-100 text-right">
+                    <h1 class="mb-0 f-18 fw-400 text-primary pointer" (click)="changeDiv('userLogin')">Back To Login</h1>
+                 </div>
+                 <div class="w-100 text-center mt-lg-4 mt-md-4 mt-sm-3 mt-2">
+                    <h1 class="mb-2 f-28 fw-700" style="color: var(--clr-6f6f6f);">User Information</h1>
+                 </div>
+                 <div class="w-100 mt-5">
+                  <label for="name" class="mb-2 f-18">Name</label>
+                  <input type="text" [(ngModel)]="userData.name" class="form-control py-2 px-3" name="name">
+               </div>
+                 <div class="w-100  mt-lg-4 mt-md-4 mt-sm-3 mt-2">
+                    <label for="email" class="mb-2 f-18">Email</label>
+                    <input type="text" [(ngModel)]="userData.email" class="form-control py-2 px-3" name="email">
+                 </div>
+                 <div class="w-100 mt-lg-4 mt-md-4 mt-sm-3 mt-2">
+                    <label for="password" class="mb-2 f-18">Password</label>
+                    <input type="text" [(ngModel)]="userData.password" class="form-control py-2 px-3" name="password">
+                 </div>
+                 <div class="w-100 mt-lg-5 mt-md-5  mt-4">
+                    <button class="py-2 px-3 login-btn" (click)="userSignUp()">Sign Up</button>
+                 </div>
+            </div>
+         </div>
+         
+         <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12">
+         </div>
+    </div>
+
+</div>

@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "636a23a9bd57cea27cb4c535"
+  },
+  "user_id": {
+    "$oid": "636a22a2bd57cea27cb4c533"
+  },
+  "article": {
+    "$oid": "636a2386bd57cea27cb4c534"
+  }
+}]

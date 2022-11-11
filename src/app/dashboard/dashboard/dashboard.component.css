@@ -1,0 +1,112 @@
+.count-card{
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.card-icon{
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+    top: 10px;
+}
+
+.icon-div{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px 0 0 12px;
+}
+
+.count-div{
+width: 70%;
+border-radius: 0 12px 12px 0;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.icon-one{
+    background-color: #6b5b95;
+}
+.icon-two{
+    background-color: #feb236;
+}
+.icon-three{
+    background-color: #d64161;
+}
+.icon-four{
+    background-color: #86af49;
+}
+
+.table-scroll{
+    overflow-x: scroll !important;
+}
+.table-scroll::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+.t-head{
+    min-height: 250px !important;
+    padding: 20px 10px !important;
+    background: #1c4e80;
+    color: #fff;
+}
+
+td{
+    padding: 10px 5px !important;
+    min-height: 150px !important;
+}
+
+.edit-btn{
+    border: none;
+    background-color: #5bc0de;
+    font-size: 28px;
+    color: #fff;
+    border-color: #46b8da;
+    border-radius: 12px;
+}
+.delete-btn{
+    border: none;
+    font-size: 28px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    border-radius: 12px;
+}
+
+.dark-modal .modal-content {
+    background-color: #292b2c;
+    color: white;
+}
+.dark-modal .close {
+    color: white;
+}
+.light-blue-backdrop {
+    background-color: #5cb3fd;
+}
+
+.modal-dialog{
+    margin: 1.74rem auto !important;
+}
+
+.sbmit-btn{
+    width: 70%;
+    background-color: #86af49;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+}
+.sbmit-btn:hover{
+    background-color: #fff;
+    color: #86af49;
+    border: 1px solid #86af49;
+    transition: 0.2s;
+}
+
+.table-image{
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+}
